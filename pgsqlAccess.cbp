@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="pgsqlAccess" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/pgsqlAccess" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-std=c++14" />
+					<Add option="-pg" />
+					<Add option="-g" />
+					<Add option="-I/home/jar/projects/structuredLogger" />
+					<Add option="-fPIC" />
+					<Add option="-fpermissive" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+					<Add library="/lib64/libpq.so" />
+					<Add library="/lib64/libpqxx.so" />
+					<Add library="/lib64/libpqxx-4.0.so" />
+					<Add library="/usr/lib64/libboost_iostreams.so" />
+					<Add library="/usr/lib64/libboost_log.so" />
+					<Add library="/usr/lib64/libboost_log_setup.so" />
+					<Add library="/usr/lib64/libboost_regex.so" />
+					<Add library="/usr/lib64/libboost_thread.so" />
+					<Add library="/usr/lib64/libboost_timer.so" />
+					<Add library="/usr/lib64/libboost_unit_test_framework.so" />
+					<Add library="/home/jar/projects/structuredLogger/bin/Debug/libstructuredLoggingDebug.so" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/pgsqlAccess" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-fPIC" />
+					<Add option="-I /home/jar/projects/structuredLogger" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="/lib64/libpq.so" />
+					<Add library="/lib64/libpqxx.so" />
+					<Add library="/lib64/libpqxx-4.0.so" />
+					<Add library="/usr/lib64/libboost_iostreams.so" />
+					<Add library="/usr/lib64/libboost_log.so" />
+					<Add library="/usr/lib64/libboost_log_setup.so" />
+					<Add library="/usr/lib64/libboost_regex.so" />
+					<Add library="/usr/lib64/libboost_thread.so" />
+					<Add library="/usr/lib64/libboost_timer.so" />
+					<Add library="/usr/lib64/libboost_unit_test_framework.so" />
+					<Add library="/home/jar/projects/structuredLogger/bin/Release/libstructuredLogging.so" />
+				</Linker>
+			</Target>
+			<Target title="UnitTest">
+				<Option output="pgsqlAccessUnitTest" prefix_auto="1" extension_auto="1" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++14" />
+					<Add option="-pg" />
+					<Add option="-m64" />
+					<Add option="-g" />
+					<Add option="-I../" />
+					<Add option="-fpermissive" />
+					<Add directory="/home/jar/projects/structuredLogger" />
+					<Add directory="/mnt-btrfs/home/jar/projects/logDigest/pgsqlAccess/" />
+					<Add directory="test" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+					<Add option="-m64" />
+					<Add library="/mnt-btrfs/home/jar/projects/logDigest/pgsqlAccess/bin/Debug/libpgsqlAccess.so" />
+					<Add library="/lib64/libpq.so" />
+					<Add library="/lib64/libpqxx.so" />
+					<Add library="/lib64/libpqxx-4.0.so" />
+					<Add library="/usr/lib64/libboost_iostreams.so" />
+					<Add library="/usr/lib64/libboost_log.so" />
+					<Add library="/usr/lib64/libboost_log_setup.so" />
+					<Add library="/usr/lib64/libboost_regex.so" />
+					<Add library="/usr/lib64/libboost_thread.so" />
+					<Add library="/usr/lib64/libboost_timer.so" />
+					<Add library="/usr/lib64/libboost_unit_test_framework.so" />
+					<Add library="/usr/lib64/libboost_filesystem.so" />
+					<Add library="/home/jar/projects/structuredLogger/bin/Debug/libstructuredLoggingDebug.so" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++14" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Linker>
+			<Add library="/lib64/libpq.so" />
+			<Add library="/lib64/libpqxx.so" />
+			<Add library="/lib64/libpqxx-4.0.so" />
+			<Add library="/usr/lib64/libboost_iostreams.so" />
+			<Add library="/usr/lib64/libboost_log.so" />
+			<Add library="/usr/lib64/libboost_log_setup.so" />
+			<Add library="/usr/lib64/libboost_regex.so" />
+			<Add library="/usr/lib64/libboost_thread.so" />
+			<Add library="/usr/lib64/libboost_timer.so" />
+			<Add library="/usr/lib64/libboost_unit_test_framework.so" />
+			<Add library="/usr/lib64/libboost_filesystem.so" />
+			<Add directory="/mnt-btrfs/home/jar/projects/logDigest/pgsqlAccess/" />
+		</Linker>
+		<Unit filename="fileread.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="fileread.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="filteredIO.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="filteredIO.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="genericTable.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="genericTable.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="msgFormatVerify.cpp">
+			<Option target="UnitTest" />
+		</Unit>
+		<Unit filename="msgFormatVerify.h">
+			<Option target="UnitTest" />
+		</Unit>
+		<Unit filename="ruleTable.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="ruleTable.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="ruleset.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="ruleset.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="searchDateTime.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="searchDateTime.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="sourceTable.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="sourceTable.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="stackdumptest.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="stackdumptest.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="test/genericTableTest.cpp">
+			<Option target="UnitTest" />
+		</Unit>
+		<Unit filename="test/main.cpp">
+			<Option target="UnitTest" />
+		</Unit>
+		<Unit filename="test/rulesTest.cpp">
+			<Option target="UnitTest" />
+		</Unit>
+		<Unit filename="test/testSetup.cpp">
+			<Option target="UnitTest" />
+		</Unit>
+		<Unit filename="test/testSetup.h">
+			<Option target="UnitTest" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
